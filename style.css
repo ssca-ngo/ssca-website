@@ -1,0 +1,372 @@
+/* ============================================
+   希望的錨 Anchor of Hope — 起始骨架樣式
+   色彩系統：
+   --navy-deep:  #16233B  深海／夜色
+   --navy-mid:   #1F3654  次要深色
+   --gold:       #D4A24C  破曉之光（主要強調色）
+   --mist:       #EDF1F0  淺霧色（淺色區塊背景，取代常見的米白）
+   --olive:      #6B7B4F  青橄欖項目色
+   --rose:       #A65B4B  亞拿項目色
+   --ink:        #1C1F22  內文深色
+   ============================================ */
+
+:root {
+  --navy-deep: #16233b;
+  --navy-mid: #1f3654;
+  --gold: #d4a24c;
+  --gold-soft: #e8c98a;
+  --mist: #edf1f0;
+  --olive: #6b7b4f;
+  --rose: #a65b4b;
+  --ink: #1c1f22;
+  --ink-soft: #4a5057;
+  --font-display: "Fraunces", "Noto Serif TC", serif;
+  --font-body: "Work Sans", "Noto Sans TC", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--mist);
+  line-height: 1.7;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+
+/* ---------- Nav ---------- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(22, 35, 59, 0.92);
+  backdrop-filter: blur(6px);
+  color: var(--mist);
+}
+
+.site-nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.site-nav .brand {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--mist);
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin: 0;
+  padding: 0;
+  font-size: 0.92rem;
+}
+
+.site-nav a.nav-link {
+  text-decoration: none;
+  color: var(--mist);
+  opacity: 0.82;
+  transition: opacity 0.2s ease;
+}
+
+.site-nav a.nav-link:hover {
+  opacity: 1;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  background: radial-gradient(ellipse at 50% -10%, var(--navy-mid), var(--navy-deep) 65%);
+  color: var(--mist);
+  padding: clamp(4rem, 10vw, 7rem) 0 clamp(5rem, 12vw, 8rem);
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero .anchor-mark {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 2rem;
+  color: var(--gold);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.hero .subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin: 0 0 2rem;
+}
+
+.hero p.lede {
+  max-width: 42rem;
+  margin: 0 auto;
+  font-size: 1.08rem;
+  color: rgba(237, 241, 240, 0.86);
+}
+
+.hero .cta-row {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--navy-deep);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 22px rgba(212, 162, 76, 0.35);
+}
+
+.btn-ghost {
+  border: 1px solid rgba(237, 241, 240, 0.4);
+  color: var(--mist);
+}
+
+.btn-ghost:hover {
+  border-color: var(--mist);
+}
+
+/* ---------- Section shell ---------- */
+section {
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
+}
+
+.section-head {
+  max-width: 40rem;
+  margin: 0 0 3rem;
+}
+
+.section-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  margin: 0.4rem 0 0;
+}
+
+/* ---------- About ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+@media (max-width: 720px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-grid p {
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid rgba(22, 35, 59, 0.08);
+  border-radius: 14px;
+  padding: 1.6rem;
+}
+
+.stat-card .stat {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--navy-deep);
+}
+
+.stat-card .stat-label {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin-top: 0.25rem;
+}
+
+.stat-card + .stat-card {
+  margin-top: 1rem;
+}
+
+/* ---------- Projects ---------- */
+.projects {
+  background: #fff;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+
+@media (max-width: 720px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  border-radius: 18px;
+  padding: 2.2rem;
+  color: var(--mist);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card.olive {
+  background: linear-gradient(160deg, var(--olive), #4e5b38);
+}
+
+.project-card.rose {
+  background: linear-gradient(160deg, var(--rose), #7a4038);
+}
+
+.project-card .eyebrow {
+  color: rgba(237, 241, 240, 0.75);
+}
+
+.project-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  margin: 0.5rem 0 0.9rem;
+}
+
+.project-card p {
+  color: rgba(237, 241, 240, 0.9);
+  font-size: 0.98rem;
+}
+
+.project-card a.card-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(237, 241, 240, 0.5);
+  padding-bottom: 2px;
+}
+
+/* ---------- Support / CTA band ---------- */
+.support-band {
+  background: var(--navy-deep);
+  color: var(--mist);
+  text-align: center;
+}
+
+.support-band h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  margin: 0 0 1rem;
+}
+
+.support-band p {
+  max-width: 34rem;
+  margin: 0 auto 2rem;
+  color: rgba(237, 241, 240, 0.82);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--navy-mid);
+  color: rgba(237, 241, 240, 0.7);
+  font-size: 0.85rem;
+  padding: 2.5rem 0;
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------- Focus states ---------- */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ---------- Reveal on scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
