@@ -1,244 +1,414 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>希望的錨 Anchor of Hope</title>
-<meta name="description" content="希望的錨——透過「亞拿」與「青橄欖」兩項計畫，陪伴在戰爭與破碎中的母親、家庭與青少年，托住他們對明天的盼望。" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Noto+Serif+TC:wght@600&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#213024" />
+  <title>希望的錨 Anchor of Hope｜中華絲路文化交流協會</title>
+  <meta name="description" content="希望的錨透過青橄欖與亞拿兩項核心計畫，長期陪伴受動盪影響的青年與家庭；網站採匿名與去識別化原則保護受助者安全與尊嚴。" />
+  <meta property="og:title" content="希望的錨 Anchor of Hope" />
+  <meta property="og:description" content="不是再多一個活動，而是一個人願意留下來陪伴。" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
 
-<!--
-  更新說明（給團隊看，不會顯示在網頁上）：
-  本次內容根據「希望的錨.pptx」「Green Olive Hope.pptx」「Hope's Anchor.pptx」
-  「希望的矛第一版.pptx」四份投影片整理。
+  <nav class="site-nav" aria-label="主要導覽">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="回到頁首">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="11" r="6" stroke="currentColor" stroke-width="2.6"/>
+            <path d="M32 17v35M18 27h28" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M14 39c0 9 8 15 18 15s18-6 18-15" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span>
+          <strong>希望的錨</strong>
+          <small>Anchor of Hope</small>
+        </span>
+      </a>
 
-  隱私處理：投影片中出現的真實姓名、年齡與照片（如 Malvina、Bat Sheva、Asaf 等）
-  基於保護受助者（部分為未成年人）的考量，網站上一律改為不具名、不放照片的
-  概括敘述。若團隊確認要換成真實姓名／照片，或改用取得授權的示意照，再請告知調整。
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="開啟導覽選單">
+        <span></span><span></span><span></span>
+      </button>
 
-  待補：奉獻專案聯絡人姓名（投影片間「張美風」／「劉美風」不一致）、
-  正式收款方式（郵局劃撥或銀行匯款需再確認），目前「支持我們」區塊
-  暫時保留原本的聯繫方式，尚未放上帳號資訊。
--->
-
-<nav class="site-nav">
-  <div class="container">
-    <a href="#top" class="brand">希望的錨 · Anchor of Hope</a>
-    <ul>
-      <li><a class="nav-link" href="#about">關於我們</a></li>
-      <li><a class="nav-link" href="#projects">事工項目</a></li>
-      <li><a class="nav-link" href="#support">支持我們</a></li>
-    </ul>
-  </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="container">
-    <svg class="anchor-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <circle cx="32" cy="12" r="6" stroke="currentColor" stroke-width="2.5"/>
-      <line x1="32" y1="18" x2="32" y2="52" stroke="currentColor" stroke-width="2.5"/>
-      <line x1="18" y1="26" x2="46" y2="26" stroke="currentColor" stroke-width="2.5"/>
-      <path d="M14 38C14 47 22 53 32 53C42 53 50 47 50 38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-    </svg>
-    <p class="subtitle">Anchor of Hope</p>
-    <h1>希望的錨</h1>
-    <p class="lede">
-      在戰爭與破碎中，托住家庭，陪伴下一代走向盼望。
-      我們是一群來自台灣與澳洲的夥伴，長期陪伴在戰火與經濟壓力下掙扎的母親、家庭與青少年。
-      透過「亞拿」與「青橄欖」兩項計畫，我們盼望成為他們生命中一份穩定的支持。
-    </p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="#projects">認識我們的事工</a>
-      <a class="btn btn-ghost" href="#support">如何支持</a>
-    </div>
-  </div>
-</header>
-
-<section id="about">
-  <div class="container about-grid">
-    <div>
-      <p class="eyebrow" style="color:var(--navy-deep)">關於我們</p>
-      <h2 style="font-family:var(--font-display); margin-top:0.4rem;">兩條路，一個異象</h2>
-      <p>
-        面對戰爭與經濟壓力帶來的破碎，我們相信生命的重建需要長期的陪伴，而不只是一次性的援助。
-        我們是一群來自台灣與澳洲的夥伴，透過「亞拿」與「青橄欖」兩項計畫，
-        分別托住獨自撐起家庭的母親、陪伴在動盪中成長的青少年，
-        在破碎中與他們一同走過，重新建立起彼此信任的關係。
-      </p>
-      <p>
-        基於在地夥伴與服事對象的安全考量，本網站不公開具體服事地點、行程與參與者身分細節，
-        如需進一步了解事工詳情，歡迎透過下方管道與我們聯繫。
-      </p>
-    </div>
-    <div>
-      <div class="stat-card">
-        <div class="stat">2</div>
-        <div class="stat-label">目前進行中的核心事工項目</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat">TW · AU</div>
-        <div class="stat-label">主要負責團隊所在地</div>
+      <div class="nav-links" id="nav-links">
+        <a href="#why">為什麼需要陪伴</a>
+        <a href="#projects">兩項事工</a>
+        <a href="#olive">青橄欖</a>
+        <a href="#anna">亞拿</a>
+        <a class="nav-cta" href="#support">與我們同行</a>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<section class="impact">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow" style="color:var(--navy-deep)">具體成果</p>
-      <h2>數字背後，是一個個真實的家</h2>
-    </div>
-
-    <div class="impact-group">
-      <p class="impact-label" style="color:var(--rose)">亞拿 · 母親與家庭陪伴</p>
-      <div class="impact-grid">
-        <div class="impact-card rose">
-          <div class="num">5 戶</div>
-          <div class="label">固定支持的單親家庭</div>
-        </div>
-        <div class="impact-card rose">
-          <div class="num">25 位</div>
-          <div class="label">受助家庭中的孩子</div>
-        </div>
-        <div class="impact-card rose">
-          <div class="num">30 次</div>
-          <div class="label">近半年配對陪伴次數</div>
+  <header class="hero" id="top">
+    <div class="hero-glow hero-glow-one"></div>
+    <div class="hero-glow hero-glow-two"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <p class="kicker">中華絲路文化交流協會｜2026 年中專案</p>
+        <h1>希望的錨</h1>
+        <p class="hero-en">ANCHOR OF HOPE</p>
+        <p class="hero-lede">在戰爭與破碎中，托住家庭，陪伴青年，讓盼望進入真實生活。</p>
+        <p class="hero-body">我們相信，真正的幫助不只解決一次危機，而是在一個人最艱難的時刻，讓他知道：<strong>你不孤單。</strong></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">認識兩項事工</a>
+          <a class="btn btn-secondary" href="#support">成為盼望的一部分</a>
         </div>
       </div>
-    </div>
 
-    <div class="impact-group">
-      <p class="impact-label" style="color:var(--olive)">青橄欖 · 青少年生命成長</p>
-      <div class="impact-grid">
-        <div class="impact-card olive">
-          <div class="num">3 個</div>
-          <div class="label">穩定聚會的城市據點</div>
+      <aside class="hero-quote-card reveal delay-1" aria-label="匿名生命故事摘錄">
+        <span class="quote-mark">“</span>
+        <blockquote>
+          我從小缺少可以依靠的家人。你們的陪伴，讓我第一次感受到：原來我也可以擁有一個家。
+        </blockquote>
+        <div class="quote-person">
+          <strong>一位接受長期陪伴的母親</strong>
+          <span>為保護當事人安全與尊嚴，姓名、照片及可識別身分細節不予公開。</span>
         </div>
-        <div class="impact-card olive">
-          <div class="num">170+ 位</div>
-          <div class="label">曾被接觸與陪伴的兒童</div>
+        <p class="quote-note">亞拿不是只提供一次性的援助；它在最艱難的時刻，讓一位母親知道：她不是孤單撐著。</p>
+      </aside>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+  </header>
+
+  <main id="main">
+    <section class="section context-section" id="why">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">WHY IT MATTERS</p>
+          <h2>戰爭之後，心也需要重建</h2>
+          <p>外在危機也許有一天會停下來，但焦慮、破碎與不確定，常常留在家庭與年輕人的日常裡。</p>
         </div>
-        <div class="impact-card olive">
-          <div class="num">20 位</div>
-          <div class="label">穩定參與門訓的青少年</div>
+
+        <div class="privacy-banner reveal" role="note" aria-label="隱私保護說明">
+          <span class="privacy-icon" aria-hidden="true">✦</span>
+          <div>
+            <strong>我們選擇先保護生命，再分享故事。</strong>
+            <p>為保護受助者、未成年人與在地夥伴的安全與尊嚴，本網站對生命故事採匿名與去識別化處理，不公開真實姓名、可辨識照片、精確地點或足以追溯身分的細節。</p>
+          </div>
+        </div>
+
+        <div class="context-grid">
+          <article class="context-card anna-tone reveal">
+            <div class="context-symbol anna-symbol" aria-hidden="true">
+              <span class="symbol-line"></span>
+              <span class="symbol-word">FAMILY</span>
+              <span class="symbol-mark">A</span>
+            </div>
+            <div class="context-content">
+              <span class="context-icon" aria-hidden="true">01</span>
+              <h3>單親母親獨自承擔</h3>
+              <p>養育、經濟壓力、情感創傷與突發危機，常在同一時間襲來。她們需要的不只是下一餐，也需要能重新站穩的關係與支持。</p>
+            </div>
+          </article>
+
+          <article class="context-card olive-tone reveal delay-1">
+            <div class="context-symbol olive-symbol" aria-hidden="true">
+              <span class="symbol-line"></span>
+              <span class="symbol-word">YOUTH</span>
+              <span class="symbol-mark">G</span>
+            </div>
+            <div class="context-content">
+              <span class="context-icon" aria-hidden="true">02</span>
+              <h3>青年在不確定中長大</h3>
+              <p>戰爭之後，許多年輕人仍面對焦慮、低落與未來感缺失。他們真正需要的，不只是一次聚會，而是一個可以長期回來的地方。</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="belief-strip reveal">
+          <p>福音的愛，需要進入真實生活處境中。</p>
+          <strong>「不是再多一個活動，而是一個人願意留下來陪伴。」</strong>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="projects" id="projects">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow" style="color:var(--olive)">事工項目</p>
-      <h2>兩項核心計畫</h2>
-    </div>
-    <div class="project-grid">
-      <div class="project-card olive">
-        <p class="eyebrow">青年事工</p>
-        <h3>青橄欖 Green Olive</h3>
-        <p>
-          陪伴在戰爭與不確定中成長的青少年，透過生命陪伴、屬靈訓練與跨族群外展，
-          在破碎的環境裡建立穩定而值得信賴的關係。目前穩定連結多個城市據點的青少年與兒童，
-          也在不同族群的年輕人之間，搭起彼此理解與信任的橋樑。
-        </p>
-        <a class="card-link" href="#support">了解更多 →</a>
+    <section class="section projects-overview" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">TWO PROJECTS · ONE HOPE</p>
+          <h2>兩個項目，一個異象</h2>
+          <p>我們以兩條不同的路徑，陪伴家庭與青年；共同的核心，是建立長期關係，讓人在最不穩定的時刻仍有可以回來的地方。</p>
+        </div>
+
+        <div class="project-pair">
+          <a class="project-card project-olive reveal" href="#olive">
+            <span class="project-number">01</span>
+            <p class="project-type">青年生命成長項目</p>
+            <h3>青橄欖 <small>Green Olive</small></h3>
+            <p>透過青年聚會、聖經學習與門徒訓練、福音外展，陪伴年輕人在不確定中建立關係、信仰與盼望。</p>
+            <span class="text-link">深入了解 <span aria-hidden="true">→</span></span>
+          </a>
+
+          <a class="project-card project-anna reveal delay-1" href="#anna">
+            <span class="project-number">02</span>
+            <p class="project-type">女性賦能項目</p>
+            <h3>亞拿 <small>Anna</small></h3>
+            <p>以經濟支持、深度家庭探訪、生命成長團契與持續禱告守望，陪伴母親重新站穩，讓家庭重新燃起盼望。</p>
+            <span class="text-link">深入了解 <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
       </div>
-      <div class="project-card rose">
-        <p class="eyebrow">女性賦能</p>
-        <h3>亞拿 Anna</h3>
-        <p>
-          陪伴獨自扛起家庭重擔的單親母親，透過食物券援助、深度家庭探訪、
-          生命成長團契與持續禱告守望，幫助她們在破碎與壓力中重新站起，
-          托住整個家庭的未來。
-        </p>
-        <a class="card-link" href="#support">了解更多 →</a>
+    </section>
+
+    <section class="project-section olive-section" id="olive">
+      <div class="container">
+        <div class="project-intro-grid">
+          <div class="project-intro reveal">
+            <p class="project-label">GREEN OLIVE · 青年生命成長項目</p>
+            <h2>有些年輕人，需要的不只是聚會，而是被長期陪伴。</h2>
+            <p>戰爭之後，許多青少年面對焦慮與缺乏動力。但他們仍願意來到聚會中，尋找力量、關係與盼望。</p>
+            <blockquote>生命陪伴，讓年輕人在不確定中，仍有一個可以回來的地方。</blockquote>
+          </div>
+
+          <div class="stats-panel olive-stats reveal delay-1">
+            <div class="stat-item"><strong>170<span>位</span></strong><p>貝都因兒童被接觸</p></div>
+            <div class="stat-item"><strong>2<span>所</span></strong><p>阿拉伯學校建立連結</p></div>
+            <div class="stat-item"><strong>20<span>位</span></strong><p>青少年穩定參與門訓</p></div>
+          </div>
+        </div>
+
+        <div class="pathway-grid reveal">
+          <article><span>01</span><h3>青年聚會</h3><p>建立安全、持續的關係空間，讓年輕人被理解、被聽見。</p></article>
+          <article><span>02</span><h3>聖經學習與門徒訓練</h3><p>從信仰、品格與生命方向上，陪伴青年逐步成熟。</p></article>
+          <article><span>03</span><h3>福音外展</h3><p>跨越語言、文化與族群隔閡，建立理解與信任。</p></article>
+        </div>
+
+        <div class="story-section">
+          <div class="story-heading reveal">
+            <p class="eyebrow">LIVES CHANGED</p>
+            <h3>生命改變，是一步一步長出來的</h3>
+            <p>青少年事工真正的果效，不只在出席人數，更在生命方向的翻轉。</p>
+          </div>
+
+          <div class="story-grid two-stories">
+            <article class="story-card reveal">
+              <div class="story-meta">匿名生命故事 · 長期陪伴</div>
+              <h4>從童年開始被陪伴，到逐漸成為願意主動參與與服事的青年</h4>
+              <p>多年持續的關係，讓一位原本害羞、缺乏安全感的年輕人，慢慢建立信心，也開始願意投入群體生活、關心別人。</p>
+              <span class="story-tag">THE SEED → THE FRUIT</span>
+            </article>
+            <article class="story-card reveal delay-1">
+              <div class="story-meta">匿名生命故事 · 走過重大失落</div>
+              <h4>悲傷沒有被輕描淡寫，但有人一直留下來陪他走</h4>
+              <p>長期陪伴沒有抹去傷口，卻讓一位曾經歷重大喪親之痛的少年，在悲傷中重新找到可以前進、連結與服事別人的方向。</p>
+              <span class="story-tag">THE WOUND → THE FRUIT</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section anna-section" id="anna">
+      <div class="container">
+        <div class="project-intro-grid reverse">
+          <div class="project-intro reveal">
+            <p class="project-label">ANNA · 女性賦能項目</p>
+            <h2>每一張食品券背後，都是一個家暫時被托住。</h2>
+            <p>不只是下一餐，也是母親終於可以喘一口氣、思考下一步的空間。亞拿以全人的關懷，陪伴母親重新站穩。</p>
+            <div class="anna-model">
+              <span>經濟支持</span><span>心靈陪伴</span><span>靈命關懷</span>
+              <strong>長遠改變</strong>
+            </div>
+          </div>
+
+          <div class="stats-panel anna-stats reveal delay-1">
+            <div class="stat-item"><strong>5<span>戶</span></strong><p>固定支持家庭</p></div>
+            <div class="stat-item"><strong>25<span>戶</span></strong><p>戰爭緊急援助</p></div>
+            <div class="stat-item"><strong>30<span>次</span></strong><p>月度食品券發放</p></div>
+            <div class="stat-item"><strong>15<span>人</span></strong><p>生命成長團契</p></div>
+          </div>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card reveal"><span class="service-icon">01</span><h3>食品券援助</h3><p>提供穩定的超市購物券，在最急迫時刻托住基本生活，也減輕長期累積的心理焦慮。</p></article>
+          <article class="service-card reveal delay-1"><span class="service-icon">02</span><h3>深度家庭探訪</h3><p>親自走進家庭了解真實處境，提供專屬關懷與情感輔導。</p></article>
+          <article class="service-card reveal delay-2"><span class="service-icon">03</span><h3>生命成長團契</h3><p>透過敬拜、查經與分享，建立深度支持網絡，讓母親不再獨自承擔。</p></article>
+          <article class="service-card reveal delay-3"><span class="service-icon">04</span><h3>持續禱告守望</h3><p>無論是否為信徒，都以禱告托住身心靈需要，建立信任與平安。</p></article>
+        </div>
+
+        <div class="featured-story reveal">
+          <div class="featured-story-copy">
+            <p class="eyebrow">ONE FAMILY AT A TIME</p>
+            <h3>不是五個案例，是五個正在被扶持的家</h3>
+            <p>真正的幫助，不只是解決一餐，而是讓一個家重新感覺自己還有盼望。</p>
+            <blockquote>「我從小缺少可以依靠的家人。你們的陪伴，讓我第一次感受到：原來我也可以擁有一個家。」</blockquote>
+            <cite>— 一位接受長期陪伴的母親（匿名）</cite>
+          </div>
+
+          <div class="mini-stories">
+            <article><strong>走出暴力的母親</strong><p>帶著孩子離開傷害，在長期支持中重新建立安全感與對「家」的歸屬。</p></article>
+            <article><strong>堅持完成學業的母親</strong><p>在經濟與家庭壓力中沒有放棄學習，為下一階段的工作與生活創造新的可能。</p></article>
+            <article><strong>重新學習健康關係的母親</strong><p>走過創傷與財務危機後，開始在支持中重建界線、信任與生活秩序。</p></article>
+            <article><strong>突發危機中的家庭</strong><p>在最困難、幾乎失去支撐的時刻得到及時援助，讓一家人有空間重新站穩。</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section trust-section">
+      <div class="container trust-grid">
+        <div class="trust-visual reveal" aria-hidden="true">
+          <div class="trust-rings">
+            <span class="ring ring-one"></span>
+            <span class="ring ring-two"></span>
+            <span class="ring ring-three"></span>
+            <span class="trust-anchor">⌁</span>
+          </div>
+          <p>TRUST<br />TAKES<br />TIME</p>
+        </div>
+        <div class="trust-copy reveal delay-1">
+          <p class="eyebrow">TRUST TAKES TIME</p>
+          <h2>信任不是短期活動，是多年陪伴結出的果子。</h2>
+          <p>真正的事工突破，不只是完成一場活動，而是在不同文化、語言與族群之間，一點一點建立理解與信任。</p>
+          <p class="trust-note">有些門，只有長期留下來的人，才等得到它慢慢打開。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section funding-section" id="support">
+      <div class="container">
+        <div class="section-heading centered light reveal">
+          <p class="eyebrow">2026 MID-YEAR FUNDING</p>
+          <h2>危機：建了一半的橋，無法讓人平安走過。</h2>
+          <p>兩個項目上半年已推進一半，但下半年的核心服事仍需要持續被托住。</p>
+        </div>
+
+        <div class="funding-summary reveal">
+          <div class="funding-metric"><span>年度預算</span><strong>US$99,890</strong></div>
+          <div class="funding-metric"><span>已執行</span><strong>US$49,900</strong><small>約 50% 已完成</small></div>
+          <div class="funding-metric highlight"><span>目前整體資金缺口</span><strong>US$43,000</strong></div>
+        </div>
+        <p class="funding-source">以上金額依 2026 年中專案報告；實際執行與匯率可能依當期狀況調整。</p>
+
+        <div class="risk-grid reveal">
+          <article>
+            <span class="risk-number">01</span>
+            <h3>單親家庭失去穩定食品券援助</h3>
+            <p>在戰爭與通膨中，家庭可能立即面臨下一餐的斷炊危機與極大焦慮。</p>
+          </article>
+          <article>
+            <span class="risk-number">02</span>
+            <h3>青年陪伴與夏令營被迫取消</h3>
+            <p>年輕人將失去在動盪中最需要的安全避風港與前線同工的生命引導。</p>
+          </article>
+        </div>
+
+        <div class="support-options reveal">
+          <div class="support-option">
+            <p class="support-price">約 US$150</p>
+            <h3>支持一個家庭一個月的食品券</h3>
+          </div>
+          <div class="support-option featured">
+            <p class="support-price">約 US$450</p>
+            <h3>支持一個家庭一整季的穩定食物供應</h3>
+          </div>
+          <div class="support-option">
+            <p class="support-price">不限金額</p>
+            <h3>支持一位青少年的長期陪伴與生命關懷</h3>
+          </div>
+        </div>
+
+        <div class="donation-panel reveal">
+          <div class="donation-copy">
+            <p class="eyebrow">GIVE · PRAY · WALK TOGETHER</p>
+            <h2>一起成為盼望的一部分</h2>
+            <p>每一張購物券，都是一家人餐桌上多的一份食物；每一次奉獻，都可能是孩子成長路上的一份盼望；每一次禱告，都在向這些家庭與年輕人傳遞基督的愛。</p>
+            <p class="donation-note">奉獻時可指定註明「希望的錨—青橄欖」或「希望的錨—亞拿」，讓奉獻更清楚對應事工需要。</p>
+          </div>
+
+          <div class="bank-card">
+            <h3>奉獻資訊</h3>
+            <dl>
+              <div><dt>機構</dt><dd>社團法人中華絲路文化交流協會</dd></div>
+              <div><dt>郵局代號</dt><dd>700（台中南和路郵局）</dd></div>
+              <div><dt>帳號</dt><dd><span id="bank-account">00214550253614</span><button class="copy-btn" data-copy="00214550253614">複製</button></dd></div>
+              <div><dt>統一編號</dt><dd>6084-5669</dd></div>
+              <div><dt>郵局電話</dt><dd>04-2261-6535</dd></div>
+            </dl>
+            <div class="contact-row">
+              <a href="mailto:contact@ssca.ngo">contact@ssca.ngo</a>
+              <a href="tel:+886935199611">專案聯絡：0935-199-611</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-section">
+      <div class="closing-overlay"></div>
+      <div class="container closing-copy reveal">
+        <p class="eyebrow">TOGETHER, WE ANCHOR HOPE</p>
+        <h2>願我們一起成為神手中的器皿，<br />把盼望、尊嚴與愛，帶給最需要的家庭與年輕人。</h2>
+        <a class="btn btn-primary" href="#support">成為盼望的一部分</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>希望的錨 · Anchor of Hope</strong>
+        <p>社團法人中華絲路文化交流協會</p>
+      </div>
+      <div class="footer-meta">
+        <p>基於受助者、未成年人與在地夥伴安全，本網站之生命故事均採匿名與必要的去識別化處理，不公開真實姓名、可辨識照片、精確地點、行程或其他足以追溯身分的細節。</p>
+        <p>© <span id="year"></span> SSCA. All rights reserved.</p>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section class="quote-section">
-  <div class="container">
-    <div class="quote-block">
-      <blockquote>
-        「我是在孤兒院長大的，從來沒有家人可以依靠。你們給予的幫助，讓我感受到自己其實擁有一個家。」
-      </blockquote>
-      <cite>——一位在陪伴中重新找到歸屬的孩子</cite>
-    </div>
-    <p class="quote-note">
-      陪伴帶來的改變，不只是解決一餐的需要，而是讓一個個家庭重新感受到自己還有盼望。
-    </p>
-  </div>
-</section>
+  <div class="toast" role="status" aria-live="polite">已複製帳號</div>
 
-<section class="support-band" id="support">
-  <div class="container">
-    <h2>與我們同行</h2>
-    <p>
-      每一份奉獻，都是陪伴一個家庭重新站立的堅實力量。
-      不論是代禱、奉獻或成為長期夥伴，每一份支持都讓這份盼望能繼續傳遞下去。
-    </p>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    <div class="tier-grid">
-      <div class="tier-card">
-        <div class="amount">約 US$150</div>
-        <div class="desc">支持一個家庭一個月的食品券援助</div>
-      </div>
-      <div class="tier-card">
-        <div class="amount">約 US$450</div>
-        <div class="desc">支持一位青少年一整季穩定的陪伴與訓練</div>
-      </div>
-      <div class="tier-card">
-        <div class="amount">不限金額</div>
-        <div class="desc">支持青少年的長期陪伴、團契與家庭探訪事工</div>
-      </div>
-    </div>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => {
+      const open = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!open));
+      navLinks.classList.toggle('open', !open);
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menuToggle.setAttribute('aria-expanded', 'false');
+      navLinks.classList.remove('open');
+    }));
 
-    <div class="cta-row" style="margin-top:2.2rem;">
-      <a class="btn btn-primary" href="mailto:contact@ssca.ngo">聯繫我們</a>
-    </div>
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach(el => observer.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('visible'));
+    }
 
-    <p class="tbd-note">
-      奉獻聯絡窗口與正式收款方式（郵局劃撥／銀行匯款）確認中，即將更新。
-      如需立即奉獻，請先透過上方「聯繫我們」與我們聯絡。
-    </p>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <span>© <span id="year"></span> 希望的錨 Anchor of Hope</span>
-    <span>負責團隊：台灣 · 澳洲</span>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  const revealEls = document.querySelectorAll('.stat-card, .project-card, .impact-card, .tier-card');
-  revealEls.forEach(el => el.classList.add('reveal'));
-
-  if ('IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          io.unobserve(entry.target);
+    const toast = document.querySelector('.toast');
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(btn.dataset.copy);
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 1800);
+        } catch {
+          window.prompt('請手動複製帳號：', btn.dataset.copy);
         }
       });
-    }, { threshold: 0.15 });
-    revealEls.forEach(el => io.observe(el));
-  } else {
-    revealEls.forEach(el => el.classList.add('is-visible'));
-  }
-</script>
-
+    });
+  </script>
 </body>
 </html>
