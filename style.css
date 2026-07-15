@@ -352,6 +352,142 @@ footer .container {
   align-items: center;
 }
 
+/* ---------- Impact stats row ---------- */
+.impact {
+  background: var(--mist);
+}
+
+.impact-group {
+  margin-bottom: 2.5rem;
+}
+
+.impact-group:last-child {
+  margin-bottom: 0;
+}
+
+.impact-group .impact-label {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin: 0 0 1.1rem;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .impact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.impact-card {
+  background: #fff;
+  border: 1px solid rgba(22, 35, 59, 0.08);
+  border-radius: 14px;
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+}
+
+.impact-card .num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--navy-deep);
+  line-height: 1.1;
+}
+
+.impact-card.olive .num {
+  color: var(--olive);
+}
+
+.impact-card.rose .num {
+  color: var(--rose);
+}
+
+.impact-card .label {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  margin-top: 0.35rem;
+}
+
+/* ---------- Testimonial quote ---------- */
+.quote-section {
+  background: var(--navy-mid);
+  color: var(--mist);
+}
+
+.quote-block {
+  max-width: 42rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote-block blockquote {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  line-height: 1.55;
+  margin: 0 0 1.2rem;
+  font-weight: 500;
+}
+
+.quote-block cite {
+  display: block;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--gold-soft);
+}
+
+.quote-note {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: rgba(237, 241, 240, 0.75);
+  text-align: center;
+}
+
+/* ---------- Giving tiers ---------- */
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2.2rem;
+}
+
+@media (max-width: 720px) {
+  .tier-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tier-card {
+  background: rgba(237, 241, 240, 0.06);
+  border: 1px solid rgba(237, 241, 240, 0.22);
+  border-radius: 14px;
+  padding: 1.6rem 1.3rem;
+  text-align: center;
+}
+
+.tier-card .amount {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--gold-soft);
+}
+
+.tier-card .desc {
+  font-size: 0.9rem;
+  color: rgba(237, 241, 240, 0.85);
+  margin-top: 0.5rem;
+}
+
+.tbd-note {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: rgba(237, 241, 240, 0.6);
+  border-top: 1px dashed rgba(237, 241, 240, 0.3);
+  padding-top: 1rem;
+}
+
 /* ---------- Focus states ---------- */
 a:focus-visible,
 button:focus-visible {
