@@ -1,508 +1,244 @@
-/* ============================================
-   希望的錨 Anchor of Hope — 起始骨架樣式
-   色彩系統：
-   --navy-deep:  #16233B  深海／夜色
-   --navy-mid:   #1F3654  次要深色
-   --gold:       #D4A24C  破曉之光（主要強調色）
-   --mist:       #EDF1F0  淺霧色（淺色區塊背景，取代常見的米白）
-   --olive:      #6B7B4F  青橄欖項目色
-   --rose:       #A65B4B  亞拿項目色
-   --ink:        #1C1F22  內文深色
-   ============================================ */
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>希望的錨 Anchor of Hope</title>
+<meta name="description" content="希望的錨——透過「亞拿」與「青橄欖」兩項計畫，陪伴在戰爭與破碎中的母親、家庭與青少年，托住他們對明天的盼望。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=Noto+Serif+TC:wght@600&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-:root {
-  --navy-deep: #16233b;
-  --navy-mid: #1f3654;
-  --gold: #d4a24c;
-  --gold-soft: #e8c98a;
-  --mist: #edf1f0;
-  --olive: #6b7b4f;
-  --rose: #a65b4b;
-  --ink: #1c1f22;
-  --ink-soft: #4a5057;
-  --font-display: "Fraunces", "Noto Serif TC", serif;
-  --font-body: "Work Sans", "Noto Sans TC", sans-serif;
-}
+<!--
+  更新說明（給團隊看，不會顯示在網頁上）：
+  本次內容根據「希望的錨.pptx」「Green Olive Hope.pptx」「Hope's Anchor.pptx」
+  「希望的矛第一版.pptx」四份投影片整理。
 
-* {
-  box-sizing: border-box;
-}
+  隱私處理：投影片中出現的真實姓名、年齡與照片（如 Malvina、Bat Sheva、Asaf 等）
+  基於保護受助者（部分為未成年人）的考量，網站上一律改為不具名、不放照片的
+  概括敘述。若團隊確認要換成真實姓名／照片，或改用取得授權的示意照，再請告知調整。
 
-html {
-  scroll-behavior: smooth;
-}
+  待補：奉獻專案聯絡人姓名（投影片間「張美風」／「劉美風」不一致）、
+  正式收款方式（郵局劃撥或銀行匯款需再確認），目前「支持我們」區塊
+  暫時保留原本的聯繫方式，尚未放上帳號資訊。
+-->
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+<nav class="site-nav">
+  <div class="container">
+    <a href="#top" class="brand">希望的錨 · Anchor of Hope</a>
+    <ul>
+      <li><a class="nav-link" href="#about">關於我們</a></li>
+      <li><a class="nav-link" href="#projects">事工項目</a></li>
+      <li><a class="nav-link" href="#support">支持我們</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container">
+    <svg class="anchor-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="32" cy="12" r="6" stroke="currentColor" stroke-width="2.5"/>
+      <line x1="32" y1="18" x2="32" y2="52" stroke="currentColor" stroke-width="2.5"/>
+      <line x1="18" y1="26" x2="46" y2="26" stroke="currentColor" stroke-width="2.5"/>
+      <path d="M14 38C14 47 22 53 32 53C42 53 50 47 50 38" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+    <p class="subtitle">Anchor of Hope</p>
+    <h1>希望的錨</h1>
+    <p class="lede">
+      在戰爭與破碎中，托住家庭，陪伴下一代走向盼望。
+      我們是一群來自台灣與澳洲的夥伴，長期陪伴在戰火與經濟壓力下掙扎的母親、家庭與青少年。
+      透過「亞拿」與「青橄欖」兩項計畫，我們盼望成為他們生命中一份穩定的支持。
+    </p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#projects">認識我們的事工</a>
+      <a class="btn btn-ghost" href="#support">如何支持</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container about-grid">
+    <div>
+      <p class="eyebrow" style="color:var(--navy-deep)">關於我們</p>
+      <h2 style="font-family:var(--font-display); margin-top:0.4rem;">兩條路，一個異象</h2>
+      <p>
+        面對戰爭與經濟壓力帶來的破碎，我們相信生命的重建需要長期的陪伴，而不只是一次性的援助。
+        我們是一群來自台灣與澳洲的夥伴，透過「亞拿」與「青橄欖」兩項計畫，
+        分別托住獨自撐起家庭的母親、陪伴在動盪中成長的青少年，
+        在破碎中與他們一同走過，重新建立起彼此信任的關係。
+      </p>
+      <p>
+        基於在地夥伴與服事對象的安全考量，本網站不公開具體服事地點、行程與參與者身分細節，
+        如需進一步了解事工詳情，歡迎透過下方管道與我們聯繫。
+      </p>
+    </div>
+    <div>
+      <div class="stat-card">
+        <div class="stat">2</div>
+        <div class="stat-label">目前進行中的核心事工項目</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat">TW · AU</div>
+        <div class="stat-label">主要負責團隊所在地</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow" style="color:var(--navy-deep)">具體成果</p>
+      <h2>數字背後，是一個個真實的家</h2>
+    </div>
+
+    <div class="impact-group">
+      <p class="impact-label" style="color:var(--rose)">亞拿 · 母親與家庭陪伴</p>
+      <div class="impact-grid">
+        <div class="impact-card rose">
+          <div class="num">5 戶</div>
+          <div class="label">固定支持的單親家庭</div>
+        </div>
+        <div class="impact-card rose">
+          <div class="num">25 位</div>
+          <div class="label">受助家庭中的孩子</div>
+        </div>
+        <div class="impact-card rose">
+          <div class="num">30 次</div>
+          <div class="label">近半年配對陪伴次數</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="impact-group">
+      <p class="impact-label" style="color:var(--olive)">青橄欖 · 青少年生命成長</p>
+      <div class="impact-grid">
+        <div class="impact-card olive">
+          <div class="num">3 個</div>
+          <div class="label">穩定聚會的城市據點</div>
+        </div>
+        <div class="impact-card olive">
+          <div class="num">170+ 位</div>
+          <div class="label">曾被接觸與陪伴的兒童</div>
+        </div>
+        <div class="impact-card olive">
+          <div class="num">20 位</div>
+          <div class="label">穩定參與門訓的青少年</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow" style="color:var(--olive)">事工項目</p>
+      <h2>兩項核心計畫</h2>
+    </div>
+    <div class="project-grid">
+      <div class="project-card olive">
+        <p class="eyebrow">青年事工</p>
+        <h3>青橄欖 Green Olive</h3>
+        <p>
+          陪伴在戰爭與不確定中成長的青少年，透過生命陪伴、屬靈訓練與跨族群外展，
+          在破碎的環境裡建立穩定而值得信賴的關係。目前穩定連結多個城市據點的青少年與兒童，
+          也在不同族群的年輕人之間，搭起彼此理解與信任的橋樑。
+        </p>
+        <a class="card-link" href="#support">了解更多 →</a>
+      </div>
+      <div class="project-card rose">
+        <p class="eyebrow">女性賦能</p>
+        <h3>亞拿 Anna</h3>
+        <p>
+          陪伴獨自扛起家庭重擔的單親母親，透過食物券援助、深度家庭探訪、
+          生命成長團契與持續禱告守望，幫助她們在破碎與壓力中重新站起，
+          托住整個家庭的未來。
+        </p>
+        <a class="card-link" href="#support">了解更多 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-section">
+  <div class="container">
+    <div class="quote-block">
+      <blockquote>
+        「我是在孤兒院長大的，從來沒有家人可以依靠。你們給予的幫助，讓我感受到自己其實擁有一個家。」
+      </blockquote>
+      <cite>——一位在陪伴中重新找到歸屬的孩子</cite>
+    </div>
+    <p class="quote-note">
+      陪伴帶來的改變，不只是解決一餐的需要，而是讓一個個家庭重新感受到自己還有盼望。
+    </p>
+  </div>
+</section>
+
+<section class="support-band" id="support">
+  <div class="container">
+    <h2>與我們同行</h2>
+    <p>
+      每一份奉獻，都是陪伴一個家庭重新站立的堅實力量。
+      不論是代禱、奉獻或成為長期夥伴，每一份支持都讓這份盼望能繼續傳遞下去。
+    </p>
+
+    <div class="tier-grid">
+      <div class="tier-card">
+        <div class="amount">約 US$150</div>
+        <div class="desc">支持一個家庭一個月的食品券援助</div>
+      </div>
+      <div class="tier-card">
+        <div class="amount">約 US$450</div>
+        <div class="desc">支持一位青少年一整季穩定的陪伴與訓練</div>
+      </div>
+      <div class="tier-card">
+        <div class="amount">不限金額</div>
+        <div class="desc">支持青少年的長期陪伴、團契與家庭探訪事工</div>
+      </div>
+    </div>
+
+    <div class="cta-row" style="margin-top:2.2rem;">
+      <a class="btn btn-primary" href="mailto:contact@ssca.ngo">聯繫我們</a>
+    </div>
+
+    <p class="tbd-note">
+      奉獻聯絡窗口與正式收款方式（郵局劃撥／銀行匯款）確認中，即將更新。
+      如需立即奉獻，請先透過上方「聯繫我們」與我們聯絡。
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>© <span id="year"></span> 希望的錨 Anchor of Hope</span>
+    <span>負責團隊：台灣 · 澳洲</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const revealEls = document.querySelectorAll('.stat-card, .project-card, .impact-card, .tier-card');
+  revealEls.forEach(el => el.classList.add('reveal'));
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-visible'));
   }
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
+</script>
 
-body {
-  margin: 0;
-  font-family: var(--font-body);
-  color: var(--ink);
-  background: var(--mist);
-  line-height: 1.7;
-}
-
-img,
-svg {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  color: inherit;
-}
-
-.eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 600;
-}
-
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 clamp(1.25rem, 4vw, 3rem);
-}
-
-/* ---------- Nav ---------- */
-.site-nav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(22, 35, 59, 0.92);
-  backdrop-filter: blur(6px);
-  color: var(--mist);
-}
-
-.site-nav .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-}
-
-.site-nav .brand {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: var(--mist);
-}
-
-.site-nav ul {
-  list-style: none;
-  display: flex;
-  gap: clamp(1rem, 3vw, 2rem);
-  margin: 0;
-  padding: 0;
-  font-size: 0.92rem;
-}
-
-.site-nav a.nav-link {
-  text-decoration: none;
-  color: var(--mist);
-  opacity: 0.82;
-  transition: opacity 0.2s ease;
-}
-
-.site-nav a.nav-link:hover {
-  opacity: 1;
-}
-
-/* ---------- Hero ---------- */
-.hero {
-  position: relative;
-  background: radial-gradient(ellipse at 50% -10%, var(--navy-mid), var(--navy-deep) 65%);
-  color: var(--mist);
-  padding: clamp(4rem, 10vw, 7rem) 0 clamp(5rem, 12vw, 8rem);
-  overflow: hidden;
-  text-align: center;
-}
-
-.hero .anchor-mark {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 2rem;
-  color: var(--gold);
-}
-
-.hero h1 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(2.6rem, 6vw, 4.2rem);
-  margin: 0 0 0.5rem;
-  letter-spacing: 0.01em;
-}
-
-.hero .subtitle {
-  font-family: var(--font-body);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold-soft);
-  margin: 0 0 2rem;
-}
-
-.hero p.lede {
-  max-width: 42rem;
-  margin: 0 auto;
-  font-size: 1.08rem;
-  color: rgba(237, 241, 240, 0.86);
-}
-
-.hero .cta-row {
-  margin-top: 2.5rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.6rem;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-}
-
-.btn-primary {
-  background: var(--gold);
-  color: var(--navy-deep);
-}
-
-.btn-primary:hover {
-  box-shadow: 0 8px 22px rgba(212, 162, 76, 0.35);
-}
-
-.btn-ghost {
-  border: 1px solid rgba(237, 241, 240, 0.4);
-  color: var(--mist);
-}
-
-.btn-ghost:hover {
-  border-color: var(--mist);
-}
-
-/* ---------- Section shell ---------- */
-section {
-  padding: clamp(3.5rem, 8vw, 6rem) 0;
-}
-
-.section-head {
-  max-width: 40rem;
-  margin: 0 0 3rem;
-}
-
-.section-head h2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
-  margin: 0.4rem 0 0;
-}
-
-/* ---------- About ---------- */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: start;
-}
-
-@media (max-width: 720px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.about-grid p {
-  color: var(--ink-soft);
-  font-size: 1.02rem;
-}
-
-.stat-card {
-  background: #fff;
-  border: 1px solid rgba(22, 35, 59, 0.08);
-  border-radius: 14px;
-  padding: 1.6rem;
-}
-
-.stat-card .stat {
-  font-family: var(--font-display);
-  font-size: 2.2rem;
-  color: var(--navy-deep);
-}
-
-.stat-card .stat-label {
-  font-size: 0.88rem;
-  color: var(--ink-soft);
-  margin-top: 0.25rem;
-}
-
-.stat-card + .stat-card {
-  margin-top: 1rem;
-}
-
-/* ---------- Projects ---------- */
-.projects {
-  background: #fff;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.75rem;
-}
-
-@media (max-width: 720px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.project-card {
-  border-radius: 18px;
-  padding: 2.2rem;
-  color: var(--mist);
-  position: relative;
-  overflow: hidden;
-}
-
-.project-card.olive {
-  background: linear-gradient(160deg, var(--olive), #4e5b38);
-}
-
-.project-card.rose {
-  background: linear-gradient(160deg, var(--rose), #7a4038);
-}
-
-.project-card .eyebrow {
-  color: rgba(237, 241, 240, 0.75);
-}
-
-.project-card h3 {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  margin: 0.5rem 0 0.9rem;
-}
-
-.project-card p {
-  color: rgba(237, 241, 240, 0.9);
-  font-size: 0.98rem;
-}
-
-.project-card a.card-link {
-  display: inline-block;
-  margin-top: 1.2rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(237, 241, 240, 0.5);
-  padding-bottom: 2px;
-}
-
-/* ---------- Support / CTA band ---------- */
-.support-band {
-  background: var(--navy-deep);
-  color: var(--mist);
-  text-align: center;
-}
-
-.support-band h2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
-  margin: 0 0 1rem;
-}
-
-.support-band p {
-  max-width: 34rem;
-  margin: 0 auto 2rem;
-  color: rgba(237, 241, 240, 0.82);
-}
-
-/* ---------- Footer ---------- */
-footer {
-  background: var(--navy-mid);
-  color: rgba(237, 241, 240, 0.7);
-  font-size: 0.85rem;
-  padding: 2.5rem 0;
-}
-
-footer .container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* ---------- Impact stats row ---------- */
-.impact {
-  background: var(--mist);
-}
-
-.impact-group {
-  margin-bottom: 2.5rem;
-}
-
-.impact-group:last-child {
-  margin-bottom: 0;
-}
-
-.impact-group .impact-label {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  margin: 0 0 1.1rem;
-}
-
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-
-@media (max-width: 640px) {
-  .impact-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.impact-card {
-  background: #fff;
-  border: 1px solid rgba(22, 35, 59, 0.08);
-  border-radius: 14px;
-  padding: 1.4rem 1.2rem;
-  text-align: center;
-}
-
-.impact-card .num {
-  font-family: var(--font-display);
-  font-size: 2rem;
-  color: var(--navy-deep);
-  line-height: 1.1;
-}
-
-.impact-card.olive .num {
-  color: var(--olive);
-}
-
-.impact-card.rose .num {
-  color: var(--rose);
-}
-
-.impact-card .label {
-  font-size: 0.86rem;
-  color: var(--ink-soft);
-  margin-top: 0.35rem;
-}
-
-/* ---------- Testimonial quote ---------- */
-.quote-section {
-  background: var(--navy-mid);
-  color: var(--mist);
-}
-
-.quote-block {
-  max-width: 42rem;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.quote-block blockquote {
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
-  line-height: 1.55;
-  margin: 0 0 1.2rem;
-  font-weight: 500;
-}
-
-.quote-block cite {
-  display: block;
-  font-style: normal;
-  font-size: 0.9rem;
-  color: var(--gold-soft);
-}
-
-.quote-note {
-  margin-top: 2rem;
-  font-size: 0.95rem;
-  color: rgba(237, 241, 240, 0.75);
-  text-align: center;
-}
-
-/* ---------- Giving tiers ---------- */
-.tier-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  margin-top: 2.2rem;
-}
-
-@media (max-width: 720px) {
-  .tier-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.tier-card {
-  background: rgba(237, 241, 240, 0.06);
-  border: 1px solid rgba(237, 241, 240, 0.22);
-  border-radius: 14px;
-  padding: 1.6rem 1.3rem;
-  text-align: center;
-}
-
-.tier-card .amount {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  color: var(--gold-soft);
-}
-
-.tier-card .desc {
-  font-size: 0.9rem;
-  color: rgba(237, 241, 240, 0.85);
-  margin-top: 0.5rem;
-}
-
-.tbd-note {
-  margin-top: 2rem;
-  font-size: 0.85rem;
-  color: rgba(237, 241, 240, 0.6);
-  border-top: 1px dashed rgba(237, 241, 240, 0.3);
-  padding-top: 1rem;
-}
-
-/* ---------- Focus states ---------- */
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 3px;
-}
-
-/* ---------- Reveal on scroll ---------- */
-.reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+</body>
+</html>
