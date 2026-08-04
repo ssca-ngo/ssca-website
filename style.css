@@ -318,6 +318,61 @@ button, input { font: inherit; }
 .contact-row { display: grid; gap: 6px; margin-top: 20px; }
 .contact-row a { color: var(--forest-700); font-weight: 600; }
 
+/* ECPay 線上捐款表單（跟 .bank-card 並列在 donation-panel 右欄） */
+.donation-options { display: grid; gap: 20px; }
+.ecpay-card {
+  padding: 28px;
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+.ecpay-card h3 {
+  margin: 0 0 6px;
+  font-family: var(--serif);
+  font-size: 1.45rem;
+}
+.ecpay-card .ecpay-sub {
+  margin: 0 0 22px;
+  color: var(--ink-soft);
+  font-size: .86rem;
+}
+.ecpay-row { margin-bottom: 16px; }
+.ecpay-row label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--ink);
+  font-size: .82rem;
+  font-weight: 600;
+}
+.ecpay-row select,
+.ecpay-row input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(50,40,20,.16);
+  background: var(--sand-50);
+  color: var(--ink);
+  font-size: .95rem;
+  font-family: var(--sans);
+}
+.ecpay-row select:focus,
+.ecpay-row input:focus {
+  outline: 2px solid var(--forest-700);
+  outline-offset: 1px;
+}
+.ecpay-card button.btn {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+}
+.ecpay-note {
+  margin: 14px 0 0;
+  color: var(--ink-soft);
+  font-size: .74rem;
+  line-height: 1.6;
+}
+
 /* Closing + footer */
 .closing-section { position: relative; min-height: 540px; display: grid; align-items: center; overflow: hidden; background: linear-gradient(rgba(23,32,26,.18), rgba(23,32,26,.78)), url('sunset-banner.webp') center/cover no-repeat; color: white; }
 .closing-section::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(23,32,26,.68), rgba(23,32,26,.18)); }
