@@ -323,6 +323,7 @@
               <p class="ecpay-sub">透過綠界金流線上刷卡，即時完成奉獻。</p>
 
               <form
+                id="ecpay-donate-form"
                 action="https://script.google.com/macros/s/AKfycbzXzQNts27Rl4TPOylGTrpMyLsNsa7mcstyidnSA9S_g-VRZPPPv_tZfJAMLagwdMPa/exec"
                 method="post"
               >
@@ -355,6 +356,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary">前往刷卡付款</button>
+                <p class="ecpay-error" style="display:none; color:#a95f47; font-size:.82rem; margin:10px 0 0;"></p>
               </form>
 
               <p class="ecpay-note">
@@ -464,6 +466,59 @@
           custom.style.display = 'none';
           sel.setAttribute('name', 'amount');
           custom.removeAttribute('name');
+        }
+      });
+    })();
+
+    // 線上捐款表單：改用背景送出（fetch），避免在 GAS 的 iframe 內
+    // 嘗試整頁導向第三方付款頁而被拒絕連線。
+    // 送出後由「這個網站自己的頁面」組出表單、跳轉到綠界，
+    // 而不是由 GAS 回傳的頁面嘗試跳轉。
+    (function () {
+      const form = document.getElementById('ecpay-donate-form');
+      if (!form) return;
+      const errorEl = form.querySelector('.ecpay-error');
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        errorEl.style.display = 'none';
+
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = '處理中…';
+        submitBtn.disabled = true;
+
+        try {
+          const body = new URLSearchParams(new FormData(form));
+          const res = await fetch(form.action, { method: 'POST', body: body });
+          const data = await res.json();
+
+          if (data.error) {
+            errorEl.textContent = data.error;
+            errorEl.style.display = 'block';
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            return;
+          }
+
+          // 在這個頁面（不是 GAS 的頁面）動態組出表單，導向綠界
+          const ecpayForm = document.createElement('form');
+          ecpayForm.method = 'POST';
+          ecpayForm.action = data.actionUrl;
+          Object.keys(data.params).forEach(function (key) {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = data.params[key];
+            ecpayForm.appendChild(input);
+          });
+          document.body.appendChild(ecpayForm);
+          ecpayForm.submit();
+        } catch (err) {
+          errorEl.textContent = '連線發生問題，請稍後再試一次。';
+          errorEl.style.display = 'block';
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
         }
       });
     })();
