@@ -317,18 +317,65 @@
             <p class="donation-note">奉獻時可指定註明「希望的錨—青橄欖」或「希望的錨—亞拿」，讓奉獻更清楚對應事工需要。</p>
           </div>
 
-          <div class="bank-card">
-            <h3>奉獻資訊</h3>
-            <dl>
-              <div><dt>機構</dt><dd>社團法人中華絲路文化交流協會</dd></div>
-              <div><dt>郵局代號</dt><dd>700（台中南和路郵局）</dd></div>
-              <div><dt>帳號</dt><dd><span id="bank-account">00214550253614</span><button class="copy-btn" data-copy="00214550253614">複製</button></dd></div>
-              <div><dt>統一編號</dt><dd>6084-5669</dd></div>
-              <div><dt>郵局電話</dt><dd>04-2261-6535</dd></div>
-            </dl>
-            <div class="contact-row">
-              <a class="btn btn-primary" href="mailto:supermantseng@gmail.com">聯繫我們</a>
-              <a href="tel:+886935199611">專案聯絡：0935-199-611</a>
+          <div class="donation-options">
+            <div class="ecpay-card">
+              <h3>線上信用卡捐款</h3>
+              <p class="ecpay-sub">透過綠界金流線上刷卡，即時完成奉獻。</p>
+
+              <form
+                action="https://script.google.com/macros/s/AKfycbzXzQNts27Rl4TPOylGTrpMyLsNsa7mcstyidnSA9S_g-VRZPPPv_tZfJAMLagwdMPa/exec"
+                method="post"
+              >
+                <div class="ecpay-row">
+                  <label for="ecpay-amount">捐款金額（新台幣）</label>
+                  <select id="ecpay-amount" name="amount" required>
+                    <option value="500">NT$ 500</option>
+                    <option value="1000">NT$ 1,000</option>
+                    <option value="3000">NT$ 3,000</option>
+                    <option value="custom">其他金額</option>
+                  </select>
+                  <input
+                    type="number"
+                    id="ecpay-amount-custom"
+                    name="amount-custom"
+                    min="1"
+                    placeholder="請輸入金額"
+                    style="display:none; margin-top:0.6rem;"
+                  />
+                </div>
+
+                <div class="ecpay-row">
+                  <label for="ecpay-name">姓名</label>
+                  <input type="text" id="ecpay-name" name="name" required />
+                </div>
+
+                <div class="ecpay-row">
+                  <label for="ecpay-email">Email（用於收據通知）</label>
+                  <input type="email" id="ecpay-email" name="email" required />
+                </div>
+
+                <button type="submit" class="btn btn-primary">前往刷卡付款</button>
+              </form>
+
+              <p class="ecpay-note">
+                目前為測試環境，尚未正式對外開放收款。
+                點擊後將導向綠界安全付款頁面，本網站不會接觸或儲存您的信用卡資訊。
+              </p>
+            </div>
+
+            <div class="bank-card">
+              <h3>奉獻資訊</h3>
+              <dl>
+                <div><dt>機構</dt><dd>社團法人中華絲路文化交流協會</dd></div>
+                <div><dt>郵局代號</dt><dd>700（台中南和路郵局）</dd></div>
+                <div><dt>帳號</dt><dd><span id="bank-account">00214550253614</span><button class="copy-btn" data-copy="00214550253614">複製</button></dd></div>
+                <div><dt>統一編號</dt><dd>6084-5669</dd></div>
+                <div><dt>郵局電話</dt><dd>04-2261-6535</dd></div>
+              </dl>
+              <div class="contact-row">
+                <a class="btn btn-primary" href="mailto:supermantseng@gmail.com">聯繫我們</a>
+                <a href="tel:+886935199611">專案聯絡：0935-199-611</a>
+              </div>
             </div>
           </div>
         </div>
@@ -402,6 +449,24 @@
         }
       });
     });
+
+    // 線上捐款表單：選「其他金額」時顯示自訂輸入框
+    (function () {
+      const sel = document.getElementById('ecpay-amount');
+      const custom = document.getElementById('ecpay-amount-custom');
+      if (!sel || !custom) return;
+      sel.addEventListener('change', function () {
+        if (this.value === 'custom') {
+          custom.style.display = 'block';
+          custom.setAttribute('name', 'amount');
+          sel.removeAttribute('name');
+        } else {
+          custom.style.display = 'none';
+          sel.setAttribute('name', 'amount');
+          custom.removeAttribute('name');
+        }
+      });
+    })();
   </script>
 </body>
 </html>
