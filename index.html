@@ -356,6 +356,26 @@
                   <input type="email" id="ecpay-email" name="email" required />
                 </div>
 
+                <div class="ecpay-row receipt-toggle-row">
+                  <label class="receipt-checkbox-label" for="ecpay-need-receipt">
+                    <input type="checkbox" id="ecpay-need-receipt" name="needReceipt" value="Y" />
+                    <span>我需要捐款收據（供列舉扣除申報使用）</span>
+                  </label>
+                </div>
+
+                <div class="ecpay-row" id="ecpay-id-row" style="display:none;">
+                  <label for="ecpay-id-number">身分證字號（供開立收據核對使用）</label>
+                  <input
+                    type="text"
+                    id="ecpay-id-number"
+                    name="idNumber"
+                    maxlength="10"
+                    placeholder="例：A123456789"
+                    autocomplete="off"
+                  />
+                  <p class="ecpay-hint">此資料僅用於開立捐款收據，不作其他用途。收據將以 Email 通知後續寄送方式。</p>
+                </div>
+
                 <button type="submit" class="btn btn-primary">前往刷卡付款</button>
                 <p class="ecpay-error" style="display:none; color:#a95f47; font-size:.82rem; margin:10px 0 0;"></p>
               </form>
@@ -467,6 +487,24 @@
           custom.style.display = 'none';
           sel.setAttribute('name', 'amount');
           custom.removeAttribute('name');
+        }
+      });
+    })();
+
+    // 線上捐款表單：勾選「需要收據」時，顯示身分證字號欄位並設為必填
+    (function () {
+      const receiptCheckbox = document.getElementById('ecpay-need-receipt');
+      const idRow = document.getElementById('ecpay-id-row');
+      const idInput = document.getElementById('ecpay-id-number');
+      if (!receiptCheckbox || !idRow || !idInput) return;
+      receiptCheckbox.addEventListener('change', function () {
+        if (this.checked) {
+          idRow.style.display = 'block';
+          idInput.setAttribute('required', 'required');
+        } else {
+          idRow.style.display = 'none';
+          idInput.removeAttribute('required');
+          idInput.value = '';
         }
       });
     })();
