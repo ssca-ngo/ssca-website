@@ -66,6 +66,7 @@ button, input { font: inherit; }
   font-weight: 600;
   letter-spacing: -.03em;
   line-height: 1.42;
+  text-wrap: balance;
 }
 .section-heading h2 { font-size: clamp(2.1rem, 5vw, 4.25rem); }
 .section-heading > p:last-child { margin: 22px 0 0; color: var(--ink-soft); font-size: 1.06rem; }
