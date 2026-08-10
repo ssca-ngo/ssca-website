@@ -373,6 +373,38 @@ button, input { font: inherit; }
   line-height: 1.6;
 }
 
+/* 捐款收據：需要收據的核取方塊 */
+.receipt-toggle-row { margin-bottom: 14px; }
+.receipt-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 0 !important;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--sand-50);
+  border: 1px solid rgba(50,40,20,.12);
+  color: var(--ink) !important;
+  font-size: .88rem !important;
+  font-weight: 500 !important;
+  cursor: pointer;
+}
+.receipt-checkbox-label input[type="checkbox"] {
+  width: auto;
+  margin-top: 2px;
+  accent-color: var(--forest-700);
+  flex-shrink: 0;
+}
+.receipt-checkbox-label span { line-height: 1.5; }
+
+/* 捐款收據：身分證字號欄位下的提示文字 */
+.ecpay-hint {
+  margin: 6px 0 0;
+  color: var(--ink-soft);
+  font-size: .74rem;
+  line-height: 1.6;
+}
+
 /* Closing + footer */
 .closing-section { position: relative; min-height: 540px; display: grid; align-items: center; overflow: hidden; background: linear-gradient(rgba(23,32,26,.18), rgba(23,32,26,.78)), url('sunset-banner.webp') center/cover no-repeat; color: white; }
 .closing-section::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(23,32,26,.68), rgba(23,32,26,.18)); }
