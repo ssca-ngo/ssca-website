@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#213024" />
+  <title>感謝您的奉獻｜希望的錨 Anchor of Hope</title>
+  <meta name="description" content="感謝您成為希望的錨的一部分，您的奉獻已收到。" />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 感謝頁專屬樣式：沿用主站色彩與字體變數，範圍限定在這個頁面 */
+    .thankyou-hero {
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+      padding: 90px 0;
+      background:
+        radial-gradient(circle at 70% 30%, rgba(207,170,90,.16), transparent 30%),
+        linear-gradient(125deg, #1a241d 0%, #27362a 50%, #18241b 100%);
+      color: var(--white);
+    }
+    .thankyou-card {
+      max-width: 620px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .thankyou-mark {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 28px;
+      color: var(--gold);
+    }
+    .thankyou-card h1 {
+      margin: 0 0 18px;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      letter-spacing: -.02em;
+    }
+    .thankyou-lede {
+      margin: 0 0 36px;
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      line-height: 1.7;
+      color: rgba(255,255,255,.82);
+    }
+    .thankyou-note-card {
+      margin: 0 0 40px;
+      padding: 26px 28px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      text-align: left;
+    }
+    .thankyou-note-card p {
+      margin: 0 0 10px;
+      color: rgba(255,255,255,.72);
+      font-size: .92rem;
+      line-height: 1.75;
+    }
+    .thankyou-note-card p:last-child { margin-bottom: 0; }
+    .thankyou-note-card strong { color: var(--gold-soft); }
+    .thankyou-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header class="thankyou-hero">
+    <div class="container thankyou-card">
+      <svg class="thankyou-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <circle cx="32" cy="11" r="6" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M32 17v35M18 27h28" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M14 39c0 9 8 15 18 15s18-6 18-15" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+      </svg>
+
+      <p class="kicker">希望的錨 · ANCHOR OF HOPE</p>
+      <h1>謝謝您，成為盼望的一部分</h1>
+      <p class="thankyou-lede">
+        您的奉獻已經收到。每一份支持，都是一個家庭多一份托住、一位青年多一份陪伴的機會。
+      </p>
+
+      <div class="thankyou-note-card">
+        <p>· 系統將以您留下的 Email 寄送捐款確認通知，請留意收件匣（若沒看到，也請檢查一下垃圾郵件夾）。</p>
+        <p>· 若您在捐款時勾選了<strong>需要收據（供列舉扣除申報使用）</strong>，社團法人中華絲路文化交流協會將依您留下的資料另行開立、寄送收據，過程中如需要補充資料，我們會透過 Email 與您聯繫。</p>
+        <p>· 如有任何問題，歡迎隨時聯繫我們：<strong>admin@ssca.ngo</strong></p>
+      </div>
+
+      <div class="thankyou-actions">
+        <a class="btn btn-primary" href="/">回到首頁</a>
+        <a class="btn btn-secondary" href="/#support">認識我們的事工</a>
+      </div>
+    </div>
+  </header>
+</body>
+</html>
