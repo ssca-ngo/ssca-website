@@ -407,6 +407,10 @@ button, input { font: inherit; }
   line-height: 1.6;
 }
 
+/* 關於本會（Google for Nonprofits 網域驗證用區塊） */
+.about-section { background: var(--white); }
+.about-section p + p { margin-top: 4px; }
+
 /* Closing + footer */
 .closing-section { position: relative; min-height: 540px; display: grid; align-items: center; overflow: hidden; background: linear-gradient(rgba(23,32,26,.18), rgba(23,32,26,.78)), url('sunset-banner.webp') center/cover no-repeat; color: white; }
 .closing-section::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(23,32,26,.68), rgba(23,32,26,.18)); }
