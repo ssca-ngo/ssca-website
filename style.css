@@ -422,3 +422,42 @@ button, input { font: inherit; }
 @media (max-width: 720px) {
   .photo-source-note { text-align: left; }
 }
+
+/* English version typography and spacing */
+body.en-page {
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.72;
+}
+.en-page .brand strong { font-family: var(--serif); font-size: 1.05rem; }
+.en-page .nav-links { gap: 22px; }
+.en-page .nav-links a { font-size: .82rem; white-space: nowrap; }
+.en-page .hero h1 {
+  font-size: clamp(4rem, 7vw, 6.8rem);
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+.en-page .hero-en { letter-spacing: .24em; }
+.en-page .hero-lede {
+  font-size: clamp(1.45rem, 2.4vw, 2.05rem);
+  line-height: 1.38;
+}
+.en-page .section-heading h2,
+.en-page .project-intro h2,
+.en-page .trust-copy h2,
+.en-page .donation-copy h2,
+.en-page .closing-copy h2 { line-height: 1.12; }
+.en-page .project-card h3 { line-height: 1.02; }
+.en-page .story-card h4 { line-height: 1.35; }
+.en-page .featured-story-copy h3 { line-height: 1.12; }
+
+@media (max-width: 1120px) and (min-width: 981px) {
+  .en-page .nav-links { gap: 15px; }
+  .en-page .nav-links a { font-size: .76rem; }
+  .en-page .nav-links .nav-cta { padding-inline: 12px; }
+}
+
+@media (max-width: 720px) {
+  .en-page .hero h1 { font-size: clamp(3.5rem, 16vw, 5.2rem); }
+  .en-page .hero-lede { font-size: 1.35rem; }
+}
