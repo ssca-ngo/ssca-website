@@ -66,7 +66,6 @@ button, input { font: inherit; }
   font-weight: 600;
   letter-spacing: -.03em;
   line-height: 1.42;
-  text-wrap: balance;
 }
 .section-heading h2 { font-size: clamp(2.1rem, 5vw, 4.25rem); }
 .section-heading > p:last-child { margin: 22px 0 0; color: var(--ink-soft); font-size: 1.06rem; }
@@ -154,7 +153,7 @@ button, input { font: inherit; }
   height: 100%;
   min-height: 650px;
   object-fit: cover;
-  object-position: 45% center;
+  object-position: center center;
   filter: saturate(.94) contrast(1.03);
 }
 .hero-quote-card {
@@ -307,7 +306,6 @@ button, input { font: inherit; }
 .donation-panel { margin-top: 70px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; padding: clamp(34px, 6vw, 70px); border-radius: 30px; background: #f2eadb; color: var(--ink); }
 .donation-copy .eyebrow { color: var(--clay); }
 .donation-copy h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
-.donation-copy h2 { font-size: clamp(1.65rem, 2.6vw, 2.15rem); white-space: normal; }
 .donation-copy > p:not(.eyebrow) { color: var(--ink-soft); }
 .donation-note { padding: 16px 18px; border-radius: 14px; background: rgba(169,95,71,.1); color: var(--clay-dark) !important; font-weight: 600; }
 .bank-card { padding: 28px; border-radius: 20px; background: var(--white); box-shadow: var(--shadow-sm); }
@@ -320,99 +318,8 @@ button, input { font: inherit; }
 .contact-row { display: grid; gap: 6px; margin-top: 20px; }
 .contact-row a { color: var(--forest-700); font-weight: 600; }
 
-/* ECPay 線上捐款表單（跟 .bank-card 並列在 donation-panel 右欄） */
-.donation-options { display: grid; gap: 20px; }
-.ecpay-card {
-  padding: 28px;
-  border-radius: 20px;
-  background: var(--white);
-  box-shadow: var(--shadow-sm);
-}
-.ecpay-card h3 {
-  margin: 0 0 6px;
-  font-family: var(--serif);
-  font-size: 1.45rem;
-}
-.ecpay-card .ecpay-sub {
-  margin: 0 0 22px;
-  color: var(--ink-soft);
-  font-size: .86rem;
-}
-.ecpay-row { margin-bottom: 16px; }
-.ecpay-row label {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--ink);
-  font-size: .82rem;
-  font-weight: 600;
-}
-.ecpay-row select,
-.ecpay-row input {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 11px 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(50,40,20,.16);
-  background: var(--sand-50);
-  color: var(--ink);
-  font-size: .95rem;
-  font-family: var(--sans);
-}
-.ecpay-row select:focus,
-.ecpay-row input:focus {
-  outline: 2px solid var(--forest-700);
-  outline-offset: 1px;
-}
-.ecpay-card button.btn {
-  width: 100%;
-  border: 0;
-  cursor: pointer;
-}
-.ecpay-note {
-  margin: 14px 0 0;
-  color: var(--ink-soft);
-  font-size: .74rem;
-  line-height: 1.6;
-}
-
-/* 捐款收據：需要收據的核取方塊 */
-.receipt-toggle-row { margin-bottom: 14px; }
-.receipt-checkbox-label {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 0 !important;
-  padding: 12px 14px;
-  border-radius: 12px;
-  background: var(--sand-50);
-  border: 1px solid rgba(50,40,20,.12);
-  color: var(--ink) !important;
-  font-size: .88rem !important;
-  font-weight: 500 !important;
-  cursor: pointer;
-}
-.receipt-checkbox-label input[type="checkbox"] {
-  width: auto;
-  margin-top: 2px;
-  accent-color: var(--forest-700);
-  flex-shrink: 0;
-}
-.receipt-checkbox-label span { line-height: 1.5; }
-
-/* 捐款收據：身分證字號欄位下的提示文字 */
-.ecpay-hint {
-  margin: 6px 0 0;
-  color: var(--ink-soft);
-  font-size: .74rem;
-  line-height: 1.6;
-}
-
-/* 關於本會（Google for Nonprofits 網域驗證用區塊） */
-.about-section { background: var(--white); }
-.about-section p + p { margin-top: 4px; }
-
 /* Closing + footer */
-.closing-section { position: relative; min-height: 540px; display: grid; align-items: center; overflow: hidden; background: linear-gradient(rgba(23,32,26,.18), rgba(23,32,26,.78)), url('sunset-banner.webp') center/cover no-repeat; color: white; }
+.closing-section { position: relative; min-height: 540px; display: grid; align-items: center; overflow: hidden; background: linear-gradient(rgba(23,32,26,.18), rgba(23,32,26,.78)), url('sunset-banner.webp?v=20261007') center/cover no-repeat; color: white; }
 .closing-section::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(23,32,26,.68), rgba(23,32,26,.18)); }
 .closing-copy { position: relative; z-index: 2; max-width: 900px; text-align: center; }
 .closing-copy .eyebrow { color: var(--gold-soft); }
@@ -500,4 +407,18 @@ button, input { font: inherit; }
   .reveal { opacity: 1 !important; transform: none !important; }
   .site-nav { position: static !important; }
   .menu-toggle, .scroll-cue, .toast { display: none !important; }
+}
+
+/* 2026-10 real project photo update */
+.photo-source-note {
+  margin: 16px 0 0;
+  color: rgba(70,64,52,.66);
+  font-size: .78rem;
+  text-align: right;
+}
+.context-card.anna-tone .context-image-wrap img { object-position: center 42%; }
+.context-card.olive-tone .context-image-wrap img { object-position: center 34%; }
+.trust-image img { object-position: center center; }
+@media (max-width: 720px) {
+  .photo-source-note { text-align: left; }
 }
